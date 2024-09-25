@@ -4,114 +4,209 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About HTML</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
-</style>
+    body {
+      background-color: #333333; /* Background abu-abu tua */
+      color: #f1f1f1; /* Teks lebih terang agar kontras */
+    }
+    .profile-section, .dark-section, .table-section {
+      background-color: #444444; /* Warna abu-abu gelap untuk bagian konten */
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .profile-section img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+    }
+    .profile-header img {
+      margin-right: 20px;
+    }
+    .profile-header div {
+      font-size: 1.2rem;
+    }
+    .section-title {
+      background-color: #8B4513; /* Warna cokelat untuk judul */
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .dark-section {
+      background-color: #555555; /* Sedikit lebih terang untuk teks */
+      color: #f1f1f1;
+    }
+    .table-section .table {
+      background-color: #f5deb3; /* Warna cream tua untuk background tabel */
+      color: #333333;
+    }
+    .table thead {
+      background-color: #fff8dc; /* Warna cream muda untuk header tabel */
+      color: #333333;
+    }
+    .table tbody tr:nth-child(even) {
+      background-color: #f5deb3; /* Warna cream tua untuk baris genap */
+    }
+    .table tbody tr:nth-child(odd) {
+      background-color: #fff8dc; /* Warna cream muda untuk baris ganjil */
+    }
+    .btn-primary {
+      margin-top: 20px;
+      background-color: #8B4513; /* Warna cokelat untuk tombol */
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #5a2e0f; /* Warna hover cokelat yang lebih gelap */
+    }
+  </style>
 </head>
 <body>
-  <p>Nama: Izulhak Algi Fahrizal<br>NIM: 230209502009<br> Kelas: PTIK F<br><del>Alamat: Jl. Bahari No.144 Kec Polewali Mandar, Kab Polewali Mandar</del><br>Alamat:Jl. Baji gau asrama qodam, <u>Makassar</u></p>
-  <p>Sekolah Asal <b>MAN</b> Al-Wasilah<sup>2</sup> Lemo</p>
-  <p><u>universitas negeri makassar</u></p>
-  <p><b><em>Semangat untuk terus belajar dan menggali ilmu ya!</em></b></p>
-   
-  <table>
-    <tr>
-        <td><h1>Masa Kelam</h1></td>
-    </tr>
-    <tr>
-        <td><p>Halo, perkenalkan nama Izulhak Algi Fahrizal, saya adalah seorang mahasiswa di salah satu universitas yang ada di kota makassar, yaitu universitas negeri makassar. Saat ini saya sudah memasuki semester tiga, dan saya saat ini sedang mengerjakan tugas "pemrograman Web".<br><br> Mungkin anda bertanya masa kelam apa yang saya maksud, tapi semester satu dan semester dua saya dipenuhi dengan kegelapan, mungkin ketika ada orang yang membaca ini akan berfikiran aneh tentang saya, tapi itu tidak masalah, silahkan berkesimpulan sendiri.</p></td>
-    </tr>
-    <tr>
-        <td>
-           Daftar Mata kuliah yang telah dipelajari
-            <ol>
-                <li>Pendidikan Agama Islam</li>
-                <li>Pendidikan Kewarganegaraan</li>
-                <li>Bahasa Indonesia</li>
-                <li>Matematika Dasar</li>
-                <li>Pengantar Kependidikan</li>
-                <li>Pancasila</li>
-                <li>Perkembangan peserta didik</li>
-                <li>Belajar dan pembelajaran</li>
-                <li>Matematika Distrik</li>
-                <li>Basis Data</li>
-            </ol>
-        </td>
-    </tr>
-        <td>
-          Daftar Dosen (ini nama-nama dosen yang saya ingat)
+
+  <div class="container mt-5">
+    <!-- Profile Section -->
+    <div class="profile-section p-4">
+      <div class="profile-header">
+        <img src="algi.jpg" alt="Foto Izulhak Algi" height="200" width="350">
+        <div>
+          <h2>Izulhak Algi Fahrizal</h2>
+          <p>NIM: 230209502009</p>
+          <p>Kelas: PTIK F</p>
+          <p><del>Alamat Lama: Jl. Bahari No.144, Kec. Polewali Mandar</del></p>
+          <p>Alamat Baru: Jl. Baji Gau, Asrama Qodam, <u>Makassar</u></p>
+          <p><strong>Sekolah Asal:</strong> MAN Al-Wasilah<sup>2</sup> Lemo</p>
+        </div>
+      </div>
+      <p class="mt-3 text-center text-success"><strong><em>Semangat untuk terus belajar dan menggali ilmu ya!</em></strong></p>
+    </div>
+
+    <!-- Dark Section (Story Section) -->
+    <div class="dark-section p-4">
+      <h3 class="text-center section-title">Masa Kelam</h3>
+      <p>Halo, perkenalkan nama saya Izulhak Algi Fahrizal. Saya adalah mahasiswa di Universitas Negeri Makassar, saat ini sudah memasuki semester tiga dan mengerjakan tugas "Pemrograman Web". Pada semester satu dan dua, saya mengalami banyak kesulitan. Meski terlihat aneh bagi sebagian orang, saya menyebutnya sebagai "masa kelam". Namun, saya tetap semangat untuk terus berjuang dan belajar.</p>
+    </div>
+
+    <!-- Academic Section -->
+    <div class="profile-section p-4">
+      <h3 class="section-title">Daftar Mata Kuliah</h3>
+      <div class="row">
+        <div class="col-md-6">
           <ul>
-            <li>Ibu Dwi Rezky</li>
-            <li>Bapak Firdaus</li>
-            <li>Bapak Ramli</li>
+            <li>Pendidikan Agama Islam</li>
+            <li>Pendidikan Kewarganegaraan</li>
+            <li>Bahasa Indonesia</li>
+            <li>Matematika Dasar</li>
+            <li>Pengantar Kependidikan</li>
           </ul>
-        </td>
-    <tr>
-      <td><img src= algi.jpg height="400" width="300"></td>
-    </tr>
-</table>
-  <table border="1">
-    <tr>
-      <th rowspan="2">No</th>
-      <th colspan="2" >Nama</th>
-      <th rowspan="2">Jenis Kelamin</th>
-      <th rowspan="2" >Alamat</th>
-      <th rowspan="2" >Asal Sekolah</th>
-    </tr>
-    <tr>
-      <th style="text-align: center;">Lengkap</th>
-      <th style="text-align: center;">Panggilan</th>
-    </tr>
-    <tr>
-      <td style="text-align: center;">1</td>
-      <td>Anzar Azhari Razak</td>
-      <td>Anzar</td>
-      <td>Laki-laki</td>
-      <td>kmp, Jalan andi latanratu takatidung, pajala, Kec. Polewali, Sulawesi Barat 91311</td>
-      <td>Pesantren Ar-Risalah Kanang</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">2</td>
-      <td>Andry Hasryan</td>
-      <td>Andry</td>
-      <td>Laki-Laki</td>
-      <td>Darma, Kec. Polewali, Kabupaten Polewali Mandar, Sulawesi Barat 91311</td>
-      <td>SMK Negeri 1 Polewali Mandar</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">3</td>
-      <td>Ari Iftikhar</td>
-      <td>Ari</td>
-      <td>Laki-laki</td>
-      <td>Jl. Bahari No. 144</td>
-      <td>Pesantren Az-Zein Bogor</td>
-    </tr>
-  </table>
-<br><br>
-  <table border="1">
-    <tr> DaftarHarga Barang
-      <th>Nama Barang</th> 
-      <th>Harga</th> 
-      <th colspan="2">Kuantiti</th> 
-    </tr>
-    <tr>
-      <td>Buku</td>
-      <td>500</td>
-      <td>100</td>
-      <td>Lusin</td>
-    </tr>
-    <tr>
-      <td>Kertas A4</td>
-      <td>40000</td>
-      <td>100</td>
-      <td rowspan="2">pack</td>
-    </tr>
-    <tr>
-      <td>Pulpen</td>
-      <td>4000</td>
-      <td>50</td>
-    </tr>
-  </table>
-  <br><br>
-  <a href="http://127.0.0.1:5500/buku_tamu.html">Silahkan Kembali ke halaman buku undangan</a>
-</body>
-</html>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Pancasila</li>
+            <li>Perkembangan Peserta Didik</li>
+            <li>Belajar dan Pembelajaran</li>
+            <li>Matematika Diskrit</li>
+            <li>Basis Data</li>
+          </ul>
+        </div>
+      </div>
+      <h5 class="mt-4">Daftar Dosen yang Saya Ingat</h5>
+      <ul>
+        <li>Ibu Dwi Rezky</li>
+        <li>Bapak Firdaus</li>
+        <li>Bapak Ramli</li>
+      </ul>
+    </div>
+
+    <!-- Table Section for Friends -->
+    <div class="table-section p-4">
+      <h3 class="section-title">Daftar Teman</h3>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Lengkap</th>
+            <th>Panggilan</th>
+            <th>Jenis Kelamin</th>
+            <th>Alamat</th>
+            <th>Asal Sekolah</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">1</td>
+            <td>Anzar Azhari Razak</td>
+            <td>Anzar</td>
+            <td>Laki-laki</td>
+            <td>Jl. Andi Latanratu Takatidung, Pajala, Polewali, Sulawesi Barat</td>
+            <td>Pesantren Ar-Risalah Kanang</td>
+          </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td>Andry Hasryan</td>
+            <td>Andry</td>
+            <td>Laki-laki</td>
+            <td>Darma, Polewali, Sulawesi Barat</td>
+            <td>SMK Negeri 1 Polewali Mandar</td>
+          </tr>
+          <tr>
+            <td class="text-center">3</td>
+            <td>Ari Iftikhar</td>
+            <td>Ari</td>
+            <td>Laki-laki</td>
+            <td>Jl. Bahari No. 144</td>
+            <td>Pesantren Az-Zein Bogor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Product Price Section -->
+    <div class="table-section p-4">
+      <h3 class="section-title">Daftar Harga Barang</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Kuantitas</th>
+            <th>Satuan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Buku</td>
+            <td>Rp 500</td>
+            <td>100</td>
+            <td>Lusin</td>
+          </tr>
+          <tr>
+            <td>Kertas A4</td>
+            <td>Rp 40.000</td>
+            <td>100</td>
+            <td>Pack</td>
+          </tr>
+          <tr>
+            <td>Pulpen</td>
+            <td>Rp 4.000</td>
+            <td>50</td>
+            <td>Pack</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Back Link -->
+    <div class="text-center">
+      <a href="http://127.0.0.1:5500/buku_tamu.html" class="btn btn-primary">Kembali ke Halaman Buku Tamu</a>
+      <a href="http://127.0.0.1:5501/event-concert.html" class="btn btn-primary">Ke halaman tugas kelompok</a>
+      <a href="https://khirinakhairurrooziqina.github.io/about-me/" class="btn btn-primary">Khirina</a>
+      <a href="http://127.0.0.1:5500/About.html" class="btn btn-primary">Khaerul</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrY
